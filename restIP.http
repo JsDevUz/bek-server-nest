@@ -1,0 +1,82 @@
+GET http://localhost:3000/book HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NDFkNzY1M2E2MzZhNjMyNWYyMWM0YyIsImlhdCI6MTczMjM2ODIyOSwiZXhwIjoxNzMyNjI3NDI5fQ.-hiy2ws5z27CGbnrowQgkIXiW64L21MhMvWdUnwosyA
+
+###
+
+GET http://localhost:3000/role HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NDFkNzY1M2E2MzZhNjMyNWYyMWM0YyIsImlhdCI6MTczMjM2ODIyOSwiZXhwIjoxNzMyNjI3NDI5fQ.-hiy2ws5z27CGbnrowQgkIXiW64L21MhMvWdUnwosyA
+
+###
+
+POST http://localhost:3000/role HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NDFjOWYxMGE0OGZiMDA2MmViMTBiYSIsImlhdCI6MTczMjM2NTk2MCwiZXhwIjoxNzMyNjI1MTYwfQ.ATJdTZKn7K2K_PBPbh9ScRAmpEcaLvibyWhfBgIuKlI
+
+{
+    "actions": ["674223f4ba3872e11de5d8fe","6742245bf6beb6889ebd43ec"],
+    "name": "superadmin",
+    "code":"admin"
+}
+###
+
+POST http://localhost:3000/action HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NDFjOWYxMGE0OGZiMDA2MmViMTBiYSIsImlhdCI6MTczMjM2NTk2MCwiZXhwIjoxNzMyNjI1MTYwfQ.ATJdTZKn7K2K_PBPbh9ScRAmpEcaLvibyWhfBgIuKlI
+
+{
+    "name": "book-delete",
+    "permissions": ["delete"],
+    "type":"action",
+    "route":"/delete"
+}
+###
+
+GET http://localhost:3000/book/6741a71811676ac06a342b4b HTTP/1.1
+Authorization: Bearer xxx
+###
+
+DELETE http://localhost:3000/book/6741ab09a81dc85984f81b3e HTTP/1.1
+
+###
+
+POST http://localhost:3000/book HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NDFjOWYxMGE0OGZiMDA2MmViMTBiYSIsImlhdCI6MTczMjM2NTk2MCwiZXhwIjoxNzMyNjI1MTYwfQ.ATJdTZKn7K2K_PBPbh9ScRAmpEcaLvibyWhfBgIuKlI
+
+{
+    "title": "sample",
+    "description": "Wed, 21 Oct 2015 18:27:50 GMT",
+    "author":"fe",
+    "category":"crime"
+}
+ 
+###
+PUT http://localhost:3000/book/6741a71811676ac06a342b4b HTTP/1.1
+content-type: application/json
+
+{
+    "title": "ssaaasample"
+   
+}
+ 
+
+###
+POST http://localhost:3000/auth/signup HTTP/1.1
+content-type: application/json
+
+{
+    "firstName": "sample",
+    "lastName": "ffrf",
+    "email":"sws@ddde.sf",
+    "password":"frffrfrfe"
+}
+ 
+###
+POST http://localhost:3000/auth/login HTTP/1.1
+content-type: application/json
+
+{
+    "email":"sw@de.sf",
+    "password":"frffrfrfe"
+}
+ 

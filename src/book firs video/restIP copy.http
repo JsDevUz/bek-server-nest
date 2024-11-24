@@ -1,0 +1,30 @@
+GET http://localhost:3000/book?page=3 HTTP/1.1
+
+###
+
+GET http://localhost:3000/book/1 HTTP/1.1
+
+###
+
+DELETE http://localhost:3000/book/6741ab09a81dc85984f81b3e HTTP/1.1
+
+###
+
+POST http://localhost:3000/book HTTP/1.1
+content-type: application/json
+
+{
+    "title": "",
+    "description": "Wed, 21 Oct 2015 18:27:50 GMT",
+    "author":"fe"
+}
+ 
+###
+PUT http://localhost:3000/book/6741a71811676ac06a342b4b HTTP/1.1
+content-type: application/json
+
+{
+    "title": "ssaaasample"
+   
+}
+ 
